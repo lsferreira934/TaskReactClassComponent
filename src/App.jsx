@@ -14,7 +14,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: []
+      tasks: [],
     };
     this.handleTaskAddition = this.handleTaskAddition.bind(this);
     this.handleTaskClick = this.handleTaskClick.bind(this);
@@ -73,6 +73,8 @@ class App extends React.Component {
                     tasks={tasks}
                     handleTaskClick={this.handleTaskClick}
                     handleTaskDeletede={this.handleTaskDeletede}
+                    showModal = {this.handleClickShowModal}
+                    optionModal={this.toggleModal}
                   />
                 </React.Fragment>
               );
